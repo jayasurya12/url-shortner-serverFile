@@ -11,7 +11,7 @@ router.post("/longData",async(req,res)=>{
         const longUrl=data.urlLink
         const email=data.email.email
         const photoUrl=data.email.photoUrl
-        const baseUrl='http://localhost:8080'
+        const baseUrl='https://url-shortners1.herokuapp.com'
         
         let we=await urlModel.find({email})
         let url=await urlModel.findOne({longUrl})
