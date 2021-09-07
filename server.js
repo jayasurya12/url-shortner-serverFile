@@ -11,6 +11,9 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
+app.get("/first",(req,res)=>{
+    res.json("it is working")
+})
 app.use("/",router)
 
 app.listen(process.env.PORT || 5000,()=>{
